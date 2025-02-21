@@ -1,0 +1,260 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.section p {
+    width: 60%;  /* Ancho del contenedor */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede el contenedor */
+    border: 1px solid black; /* Solo para visualizar el contenedor */
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+  }
+
+.img-solarisplayers {
+    width: 85vh;
+    height: 45vh;
+}
+
+.img-solaris-nuevo {
+    width: 85vh;
+    height: 45vh;
+}
+
+.img-nightbox {
+    left: 33%;
+    width: 55vh;
+    height: 25vh;
+    margin-bottom: 3vh;
+}
+
+.texto-sobre-mi {
+    font-size: 2vh;
+}
+
+.texto-experiencia {
+    font-size: 2vh;
+}
+
+.texto-proyectos {
+    font-size: 2vh;
+}
+
+.texto-contacto {
+    font-size: 12vh;
+}
+
+.texto-ejemplos {
+    font-size: 2vh;
+}
+
+.section h1 {
+    font-size: 20vh;
+}
+
+.axxtrial {
+    font-size: 8vh;
+}
+
+.loader-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+
+.section.show {
+    opacity: 1;
+}
+
+nav {
+    position: fixed;
+    top: 2vh; /* Fija el nav en la parte superior */
+    left: 32%;
+    width: 70vh;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 100px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+
+
+@media only screen and (max-width: 1125px) {
+    nav {
+        position: fixed;
+        top: 2vh;
+        left: 12%;
+        width: 70vh;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 100px;
+    }
+    
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin-bottom: 10px;
+  }
+  
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
